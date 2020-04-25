@@ -13,8 +13,8 @@ import demo.service.DemoPortType;
 public class WebServiceConfig {
 
     @Bean
-    public Endpoint endpoint(final Bus bus, final DemoPortType cdProcessForCobolPortTypePortType) {
-        EndpointImpl endpoint = new EndpointImpl(bus, cdProcessForCobolPortTypePortType);
+    public Endpoint endpoint(final Bus bus, final DemoPortType demo) {
+        EndpointImpl endpoint = new EndpointImpl(bus, demo);
         endpoint.publish("/demo");
         return endpoint;
     }
